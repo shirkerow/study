@@ -2,30 +2,69 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <style type="text/css">
+        <style type="text/css">  
+        body{
+                display: flex;
+                flex-wrap: wrap;
+            }
         .box{
             width: 100px;
             height: 100px;
             background-color: crimson;
             cursor: pointer;
+            margin: 0 8px 8px 8px;
             transition: .8s;
+            text-align: center;
+            line-height: 100px;
         }
         .circle{
             background-color: turquoise;
             border-radius: 50%;
-            transform:perspective();
+            transform:rotate(360deg);
         }
-        </style>
+        .hit{
+            background-color: turquoise;
+            border-radius: 50%;
+            transform:rotate(360deg);
+
+        }
+        .miss{
+            transform: scale(0.9);
+        }
+        </style> 
         <title>boxcircle</title>
     </head>
     <body>
-        <div class="box" id="tgt"></div>
+        <!-- <div class="box" id="tgt"></div> -->
+
         <script>
-            'use strict';
-            const tgt = document.getElementById('tgt');
-            tgt.addEventListener('click',() =>{
-                tgt.classList.toggle('circle');
-            });       
+           'use strict';
+
+           const dificulty = 5;
+           const hit = Math.floor(Math.random() * dificulty);
+
+           for(let i = 0;i < dificulty;i++){
+            const div = document.createElement('div');
+            div.classList.add('box');
+            div.addEventListener('click', () => {
+                if (hit === i){
+                    div.textContent = 'hit!';
+                    div.classList.add('hit');
+                } else{
+                    div.textContent = 'miss!';
+                    div.classList.add('miss');
+                }
+            });
+
+            
+                document.body.appendChild(div);
+           
+        }
+
+            // const tgt[] = document.querySelectorAll('div');
+            // tgt.addEventListener('click',() =>{
+            //     tgt.classList.toggle('circle');
+            // });       
         </script>
     </body>
 </html>
