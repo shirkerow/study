@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            cursor: pointer;
+            transition: .8s;
+        }
+        .circle{
+            background-color: turquoise;
+            border-radius: 50%;
+            transform:perspective();
+        }
+        </style>
+        <title>boxcircle</title>
+    </head>
+    <body>
+        <div class="box" id="tgt"></div>
+        <script>
+            'use strict';
+            const tgt = document.getElementById('tgt');
+            tgt.addEventListener('click',() =>{
+                tgt.classList.toggle('circle');
+            });       
+        </script>
+    </body>
+</html>

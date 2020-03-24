@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+
+    <body>
+        <button id='do'>やるぜ</button> <button id='did'>やったぜ</button>
+        <h1 id="target">愉しいｼﾞﾔﾊﾞｽｸﾘﾌﾟﾄ</h1>
+        <P>ええ、ええ、ええ、ええ</P>
+        <P>あはははははははははは</P>
+        <P>ええ、ええ、ええ、ええ</P>
+        <P>あはははははははははは</P>
+        <P>ええ、ええ、ええ、ええ</P>
+        <P>あはははははははははは</P>
+        <P>ええ、ええ、ええ、ええ</P>
+        <P>あはははははははははは</P>
+
+        <script>
+            'use strict';
+            const tgt = document.getElementById('target');
+            const textchenge = () =>{
+                // document.querySelector('h1').textContent = "chenged";
+                // document.querySelector('p').textContent = "chenged";
+                // document.querySelectorAll('p') = "chenged";
+                //document.getElementById('target').textContent = "chenged";
+            }
+
+            document.querySelector('#do').addEventListener('click',() => {
+                    tgt.textContent = "chenged";
+                    tgt.style.color = 'darkblue';
+                    tgt.style.backgroundColor = 'violet';
+                })
+            document.querySelector('#did').addEventListener('click',() => {
+                    tgt.textContent = "愉しいｼﾞﾔﾊﾞｽｸﾘﾌﾟﾄ";
+                    tgt.style.color = 'violet 7nh';
+                    tgt.style.backgroundColor = 'darkblue';
+                })
+           // setTimeout(textchenge,1000);
+        </script>
+    </body>   
+</html>
