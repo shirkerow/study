@@ -1,0 +1,43 @@
+1.
+SELECT *
+FROM Customers
+WHERE CustomerName not like '%株式会社%' and Address like '%江戸川区%';
+
+2.
+SELECT BloodType as 血液型,avg(Height) as 平均身長,avg(Weight) as 平均体重
+FROM Enployees
+GROUP BY BloodType;
+
+3.
+SELECT EmployeeID as 社員ID,count(EmployeeID) as 支給回数
+FROM Salary
+GROUP BY EmployeeID
+HAVING count(EmployeeID) < 12;
+
+4.
+SELECT ProductID as 商品ID,count(ProductID) as 売上レコード数
+FROM Sales
+WHERE ProductID between 20 and 30
+GROUP BY ProductID
+HAVING count(ProductID) =< 30;
+
+SELECT	cst.顧客名,
+		odr.合計金額,
+		sum(仕入単価) / sum(販売単価) as 原価率 
+FROM	T_ORDER_DETAIL as odd
+		right outer join T_ORDER as odr 
+			on odr.注文ID = odd.注文ID 
+			and 合計金額 >= 500000	
+		left outer join M_CUSTOMERS as cst 
+			on odr.顧客ID = cst.顧客ID
+		left outer join M_PRODUCTS as prd 
+			on odd.商品CD = prd.商品CD
+WHERE  odd.注文ID = (select 注文ID　from(select top 1 odd.注文ID,sum(仕入単価)/sum(販売単価) as genka
+											from T_ORDER_DETAIL as odd join M_PRODUCTS as prd 
+											on odd.商品CD = prd.商品CD 
+											join T_ORDER as odr  on odr.注文ID = odd.注文ID and 合計金額 >= 500000
+											group by odd.注文ID order by genka)as tgtid)
+GROUP BY odr.注文ID,
+		 cst.顧客名,
+		 odr.合計金額;
+

@@ -1,0 +1,86 @@
+1.
+SELECT ProductName
+FROM Products;
+
+2.
+SELECT PayDate,EmployeeID,Amount
+FROM Salary;
+
+3.
+SELECT CustomerName as 顧客名,CustomerName as 得意先
+FROM Customers;
+
+4.
+SELECT (weight * 3) - 50 as 体重の3倍引く50
+FROM Employees;
+
+5.
+SELECT CustomerID + power(CustomerClassID,3) as 結果
+FROM Customers;
+
+6.
+SELECT (EmployeeName + 'さんの')+('E-MAIL:'+ Email) as 連絡先
+FROM Employees;
+
+7.
+SELECT max(Price) as 最高額価格
+FROM Products;
+
+8.
+SELECT EmployeeName,Height,Weight
+FROM Employees
+WHERE Height >= 170 and Weight >= 60;
+
+9.
+SELECT EmployeeName
+FROM Employees
+WHERE EmployeeName like '%リ%' and Height =< 160;
+
+10.
+SELECT 	SalaryID as 給与ID,
+	Case 
+	 when Amount >= 500000 then 'A'
+	 when Amount >= 300000 then 'B'
+	 when Amount >= 150000 then 'C'
+	 else 'D' 
+	End as ランク
+FROM 	Salary;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT	cst.顧客名,
+		odr.合計金額
+		--prd.仕入単価 / prd.販売単価 as 原価率 
+FROM	T_ORDER_DETAIL as odd
+		join T_ORDER as odr 
+			on odr.注文ID = odd.注文ID 
+			and 合計金額 >= 500000	
+		join M_CUSTOMERS as cst 
+			on odr.顧客ID = cst.顧客ID
+		join M_PRODUCTS as prd 
+			on odd.商品CD = prd.商品CD
+WHERE  .注文ID = (select top 1 注文ID,sum(仕入単価)/sum(販売単価) as genka
+			from T_ORDER_DETAIL as odd join M_PRODUCTS as prd 
+			on odd.商品CD = prd.商品CD group by 注文ID order by genka)
+GROUP BY odr.注文ID,
+		 cst.顧客名,
+		 odr.合計金額;
+
+
+
+
+
+
+
