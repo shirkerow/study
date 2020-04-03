@@ -7,8 +7,8 @@
     <title>ポートフォリオ</title>
 </head>
 <body>
-    <div id = "switcher"></div> 
     <div id='topmenu' class = 'closenow'>
+        <h1>M E N U</h1>
         <a href = "#jump1">TOP</a>
         <a href = "#jump2">自己紹介</a>
         <a href = "#jump3">プログラミング</a>
@@ -16,40 +16,123 @@
         <a href = "#jump5">links</a>
     </div>
     <div id='main'>
+        <div id = 'decoration1'></div>
+        <div id = 'decoration2'></div>
         <a name = "jump1">
-            <!-- <div class="ball"></div> -->
+            <canvas id = "maingraphic">
         </a>
-
-        <p><a name = "jump2">自己紹介</a></p>
-        <div　class ="txt">
-
-
+        <div id=clkp><span id="clkme">click me</span></div>
+        <div id='welcome'>
+            <div id = "welcometext" >
+            <p>WELCOME!!</p>
+            <p></p>
+            <p></p>
+            <p>contents</p>
+            <p>↓ </p>
+            </div>
+        </div>      
+        
+        <div class = "space"></div>
+        <a name = "jump2"></a>
+        <p class = "title">自己紹介</p>
+        <div class = "text">
+            <p>名前：植田 一光</p>
+            <p>生年月日:1995年12月31日（<span id="age"></span>歳）</p>
+            <p>出身：岡山県</p>
+            <p>出身大学：岡山理科大学</p>
+            <p>現住所：大阪市内</p>
+            <p>Email:needless4696＠gmail.com</p>
         </div>
-        <a href = "#jump1">TOPへ</a>
+        <div class = "toright"> <a href = "#jump1">TOPへ</a></div>
 
-        <p><a name = "jump3">プログラミング</a></p>
-        <div　class ="txt">
-        
-        
+        <div class = "space"></div>
+        <a name = "jump3"></a>
+        <p class = "title">プログラミング経験</p>
+        <div class = "text">
+            <p>VB.net</p>
+            <p>VBA</p>
+            <p>JavaScript</p>
+            <p>C#</p>
+            <p>Perl</p>
         </div>
-        <a href = "#jump1">TOPへ</a>
-        
-        <p><a name = "jump4">趣味</a></p>
-        <div　class ="txt">
-        
-        
+        <div class = "toright"> <a href = "#jump1">TOPへ</a></div>
+
+        <div class = "space"></div>
+        <a name = "jump4"></a>
+        <p class = "title">趣味</p>
+        <div class = "text">
+        <table>
+        <tr><td colspan="2">
+           <p id='tt1' class = "hobti"><span id = 'ltri1' class='triangleleft'>▼</span>ゲヱム<span id = 'rtri1' class='triangleright'>▼</span></p>
+        </td></tr>
+        <tr id='tr1' class='ditailoff'><td colspan="2">
+            <div class = 'hobby'><p>FPS,アクションシューター,ストラテジーなどが主</p>
+            <p>BattleField,Rainbowsixsiege,civilization,Acecombat,borderlandsみたいなのをやってます</p>
         </div>
-        <a href = "#jump1">TOPへ</a>
-        
-        <p><a name = "jump5">links</a></p>
-        <div　class ="txt">
-        
-        
+        </td></tr>
+        <tr></tr>
+        <tr><td colspan="2">
+           <p id='tt2' class='hobti'><span id = 'ltri2' class='triangleleft'>▼</span>音楽鑑賞<span id = 'rtri2' class='triangleright'>▼</span></p>
+        </td></tr>
+        <tr id='tr2'class='ditailoff'><td colspan="2">
+           <div class = 'hobby'><p>主にメタルとかを聴きます</p>
+           <p>UnluckyMorpheus,ImperialCircusDeadDecadence,ForegroundEclipse,陰陽座,電気式華憐音楽集団,妖精帝國</p>
+           <p>BeastinBlack,IceNineKills,InfantAnniahrator,MyChemicalRomance,DarkMoor</p></div>
+        </td></tr>
+        <tr></tr>
+        <tr><td colspan="2">
+        <p id='tt3' class='hobti'><span id = 'ltri3' class='triangleleft'>▼</span>工作<span id = 'rtri3' class='triangleright'>▼</span></p>
+        </td></tr>
+        <tr id='tr3' class='ditailoff'><td colspan="2">
+            <div class = 'hobby'></div><p>たまになんか作る程度です　主にプラモとか作ります。手慰みレベル</p></div>
+        </td></tr>
+        <tr></tr>
+        <tr><td colspan="2">
+        <p id='tt4' class='hobti'><span id = 'ltri4' class="triangleleft">▼</span>シーシャ（水たばこ）<span id = 'rtri4' class='triangleright'>▼</span></p>
+        </td></tr>
+        <tr id='tr4' class='ditailoff'><td>
+            <img src='https://pbs.twimg.com/media/EUHGlMOVAAApQYC?format=jpg&name=large'></td>
+            <td><div class = 'hobby'><p>←こんなやつです　ピーチとかのフルーツフレーバーが好き。</p>
+                <p>ALFAKHERやDEBAJなどの中東系もいいしFUMARIやFANTASIAやAZUREのアメリカ系もいいですね(優柔不断)</p>
+                <p>socialsmokeはちょっと苦手かもしれません（小声）</p>
+                <p>自分でも作って家で吸うけど、以下お気に入りのおすすめシーシャ屋さん（敬称略）</p>
+                <p>-----------------------------------------</p>
+                <p>大阪：RAS(梅田/難波/アメ村),sifl(日本橋),siflcache(天六),appareshisha(京橋),Souq(天満橋/アメ村),good-bye(道頓堀)</p>
+                <p>京都：mochpit(今出川),sloth(四条)</p>
+                <p>東京：kimet(浅草),goonies(明大前),Akibasmokers(秋葉原),kannok(自由が丘),はちグラム(吉祥寺)</p>
+          <p><span id='warn'>※タバコは20歳になってから※</span></p></div>
+        </td></tr>
+        <tr></tr>
+        <tr><td colspan="2">
+          <p id='tt5' class='hobti'><span id = 'ltri5' class='triangleleft'>▼</span>お絵描き<span id = 'rtri5' class='triangleright'>▼</span></p>
+        </td></tr>
+        <tr id='tr5' class='ditailoff'><td><div class = 'hobby'><p>2か月に1枚くらいで描きます。ドヘタ。</p>
+            <p>pixivリンク参照（しないで）</p>
+            <p>これはドット絵で描いた推し</p></div></td>
+            <td><img src='https://pbs.twimg.com/media/Dm5F8I8UYAAU-8e?format=jpg&name=900x900'></td>
+           </tr>
+           <tr></tr>
+        <tr id='tt6' class='hobti'><td colspan="2"><span id = 'ltri6' class='triangleleft'>▼</span>ミリタリー<span id = 'rtri6'  class='triangleright'>▼</span></td></tr>
+        <tr id = 'tr6' class='ditailoff'>
+            <td><img src='https://pbs.twimg.com/media/D3B0jokUgAA4lXD?format=jpg&name=large'></td>
+                <td><div class = 'hobby'><p>エアガン集めたり戦車や軍艦とか調べたりもします</p>
+                <p>これはうちの武器庫</p></td></div>
+        </tr>
+        </table>
+       <div class = "toright"> <a href = "#jump1">TOPへ</a></div>
+
+
+
+        <div class = "space"></div>
+        <a name = "jump5"><p class = "title"></p>links</p></a>
+        <div class = "txt">
+            <p class = "lnk"><a href = "https://github.com/shrikerow" target="_blank"><img class = 'icon' src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"> githubです。無です。</a></p>
+            <p class = "lnk"><a href = "https://www.pixiv.net/users/5725402" target="_blank"><img class = 'icon' src = "https://policies.pixiv.net/pixiv_logo.8abd8cea.png">  恥の実体ことpixivです</a></p>
         </div>
-        
-        <a href = "#jump1">TOPへ</a>
+         
+        <div class = "toright"> <a href = "#jump1">TOPへ</a></div>
     </div>
-    
+    </div>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -39,6 +39,8 @@
             z-index: 1;
         }
         #show{
+            height:500px;
+            width: 500px;
             float: left;
             cursor: pointer;
         }
@@ -59,7 +61,7 @@
         </ul>
     </div>
     <div id ='main'>
-        <i class="fa fa-bars" id="show"></i> 
+        <div id="show"></div> 
         <h1>HELL-O world</h1>
         <p>HELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-O</p>
         <p>HELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-OHELL-O</p>
@@ -87,12 +89,14 @@
         const main = document.getElementById("main");
         
         show.addEventListener('click',() =>{
-            if(main.className === "openmenu"){
-                main.className = '';
-            }else{
-                main.className = "openmenu";
-            }
-        });
+                show.style.backgroundColor = 'red';
+
+            // if(main.className === "openmenu"){
+            //     main.className = '';
+            // }else{
+            //     main.className = "openmenu";
+            });
+        // });
     </script>
 </body>
 </html>

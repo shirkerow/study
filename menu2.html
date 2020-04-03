@@ -20,7 +20,7 @@
         #menu{
             position: absolute;
             top: 0;
-            right: -180px;
+            right: -170px;
             color: ghostwhite;
             background-color:darkturquoise;
             padding: 8px;
@@ -101,12 +101,16 @@
 
     <script>
         'use strict';
-        const show = document.getElementById("show");
+        const show = document.getElementById("menu");
         const hide = document.getElementById("hide");
         const body = document.querySelector("body");
 
-        show.addEventListener('click',() =>{
+        show.addEventListener('mouseover',() =>{
                 body.className = "menuopen";
+        });
+
+        show.addEventListener('mouseleave',() =>{
+                body.className = "";
         });
 
         hide.addEventListener('click',() =>{
